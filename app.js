@@ -5,6 +5,8 @@ var tweetBank = require('./tweetBank');
 var routes = require("./routes/");
 var path = require('path');
 var router = express.Router();
+var bodyParser = require('body-parser');
+
 
 app.use('/', routes);
 
@@ -16,6 +18,8 @@ app.use(function(req,res,next) {
 })
 
 app.use(express.static(path.join(__dirname, '/public')));
+
+
 //console.log(__dirname);
 
 

@@ -16,7 +16,9 @@
       <!-- display tweets here -->
       {% for tweet in tweets %}
         <li><a href="/users/{{tweet.name}}">{{tweet.name}}</a> - {{tweet.content}}</li>
-        {% if showForm %}
+
+      {% endfor %}
+	  	{% if showForm %}
 		  <form action="/tweets" method="POST">
 		    <label for="name_field">Name:</label>
 		    <input name="name" type="text" id="name_field" />
@@ -27,7 +29,6 @@
 		    <input type="submit" value="Submit" />
 		  </form>
 		{% endif %}
-      {% endfor %}
       
 
       
