@@ -4,6 +4,7 @@ var swig = require('swig');
 var tweetBank = require('./tweetBank');
 var routes = require("./routes/");
 var path = require('path');
+var router = express.Router();
 
 app.use('/', routes);
 
@@ -15,7 +16,9 @@ app.use(function(req,res,next) {
 })
 
 app.use(express.static(path.join(__dirname, '/public')));
-console.log(__dirname);
+//console.log(__dirname);
+
+
 
 // app.get('/stylesheets/style.css', function(req, res, next){
 // 	var options = {
